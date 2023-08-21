@@ -65,16 +65,7 @@ void loop() {
          modo = 0;
       }
 
-    if(modo == 1){
 
-      if(t > tempMax){
-        digitalWrite(25, 1);
-      }
-      if(t < tempMax - histerese){
-        digitalWrite(25, 0);
-      }
-   
-    }
     if(modo == 0){
      if(recebido == 'B') {
        digitalWrite(25, 1);
@@ -87,4 +78,14 @@ void loop() {
 
     Serial.println(recebido);
   }
+      if(modo == 1){
+
+      if(t > tempMax){
+        digitalWrite(25, 1);
+      }
+      if(t < tempMax - histerese){
+        digitalWrite(25, 0);
+      }
+   
+    }
 }
