@@ -1,0 +1,2 @@
+/*6) Programar para que o usuário digite 5 números e caso sejam pares, mostre a média deles. Se algum número digitado não for par, ao final não
+será mostrada a média e sim uma mensagem “Um dos números digitados era ímpar”. */
