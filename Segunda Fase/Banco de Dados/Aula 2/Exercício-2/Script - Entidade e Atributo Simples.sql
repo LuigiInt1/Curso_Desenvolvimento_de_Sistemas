@@ -1,0 +1,23 @@
+/*Crie um projeto de banco de dados para armazenar os 
+livros da biblioteca . 
+Você deve armazenar:
+• Titulo
+• Autor
+• Editora
+• Ano de publicação
+*/
+
+DROP DATABASE IF exists DBEXEMPLO04;
+
+CREATE DATABASE DBEXEMPLO04;
+
+USE DBEXEMPLO04;
+
+CREATE TABLE LIVRO(
+IDLIVRO INT NOT NULL AUTO_INCREMENT,
+TITULO VARCHAR(145) NOT NULL,
+AUTOR VARCHAR(145) NOT NULL,
+EDITORA VARCHAR(60) NOT NULL,
+ANO_PUBLICACAO INT NOT NULL,
+PRIMARY KEY (IDLIVRO)
+);

@@ -1,0 +1,33 @@
+/*Crie um projeto de banco de dados para armazenar informações
+dos alunos.
+Você deve armazenar:
+• Nome
+• Idade
+• Endereço compostos por:
+• Rua
+• Numero
+• Bairro
+• Cidade
+• Estado
+• Cep
+• Complemento*/
+
+DROP DATABASE IF exists DBEXEMPLO06;
+
+CREATE DATABASE DBEXEMPLO06;
+
+USE DBEXEMPLO06;
+
+CREATE TABLE ALUNO(
+IDALUNO INT NOT NULL AUTO_INCREMENT,
+NOME VARCHAR(145) NOT NULL,
+IDADE INT NOT NULL,
+RUA VARCHAR(145) NOT NULL,
+NUMERO INT NOT NULL,
+BAIRRO VARCHAR(60) NOT NULL,
+CIDADE VARCHAR(120) NOT NULL,
+ESTADO CHAR(2) NOT NULL,
+CEP CHAR(9) NOT NULL,
+COMPLEMENTO VARCHAR(160),
+PRIMARY KEY (IDALUNO)
+);

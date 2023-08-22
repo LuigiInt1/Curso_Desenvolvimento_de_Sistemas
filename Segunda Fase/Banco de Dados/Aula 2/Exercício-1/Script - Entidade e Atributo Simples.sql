@@ -1,0 +1,28 @@
+/*Crie um projeto de banco de dados para armazenar os 
+carros que usam o estacionamento. 
+Você deve armazenar:
+• Marca
+• Modelo
+• Ano de Fabricação
+• Ano do Modelo
+• Placa
+• Cor
+• Numero do chass*/
+
+DROP DATABASE IF exists DBEXEMPLO03;
+
+CREATE DATABASE DBEXEMPLO03;
+
+USE DBEXEMPLO03;
+
+CREATE TABLE CARRO(
+IDCARRO INT NOT NULL AUTO_INCREMENT,
+PLACA CHAR(7) NOT NULL,
+MARCA VARCHAR(20) NOT NULL,
+MODELO VARCHAR(60) NOT NULL,
+COR VARCHAR(60) NOT NULL,
+ANO_MODELO INT NOT NULL,
+ANO_FABRICACAO INT NOT NULL,
+NUMERO_CHASSI CHAR(17) NOT NULL,
+PRIMARY KEY (IDCARRO)
+);
