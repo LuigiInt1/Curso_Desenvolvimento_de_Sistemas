@@ -1,0 +1,146 @@
+/*2)Escreva os comandos SQL para listar o QUIZ
+com IDQUIZ = 2, as perguntas que pertencem
+esse QUIZ e as opções de resposta.*/
+SELECT
+QUIZ.IDQUIZ,
+QUIZ.TITULO,
+PERGUNTAS.*,
+OPCAO.TEXTO
+FROM
+QUIZ
+INNER JOIN PERGUNTA ON
+QUIZ.IDQUIZ = PERGUNTA.IDQUIZ
+INNER JOIN OPCAO ON
+PERGUNTA.IDPERGUNTA = OPCAO.IDPERGUNTA
+WHERE
+IDQUIZ = 2;
+
+/*3)Escreva os comandos SQL para listar todas as
+participações, coloque o nome e o e-mail do
+participante, a resposta escolhida, o enunciado
+da pergunta e o titulo e a descrição do QUIZ*/
+SELECT
+PARTICIPANTE.NOME,
+PARTICIPANTE.EMAIL,
+RESPOSTA.OPCAO_IDOPCAO,
+PERGUNTA.ENUNCIADO,
+QUIZ.TITULO,
+QUIZ.DESCRICAO
+FROM
+PARTICIPANTE
+INNER JOIN RESPOSTA ON
+PARTICIPANTE.IDPARTICIPANTE = RESPOSTA.IDPARTICIPANTE
+INNER JOIN PERGUNTA ON
+PERGUNTA.IDPERGUNTA = RESPOSTA.IDPERGUNTA
+INNER JOIN QUIZ ON
+QUIZ.IDQUIZ = PERGUNTA.IDQUIZ;
+
+/*4)Escreva os comandos SQL para listar somente
+as respostas certas, desde que o QUIZ seja do
+tipo “T”. Liste o código da pergunta, o
+enunciado, e todos os dados da opção.*/
+SELECT
+RESPOSTA.OPCAO_IDOPCAO,
+PERGUNTA.IDPERGUNTA,
+PERGUNTA.ENUNCIADO,
+OPCAO.*
+FROM
+RESPOSTA
+INNER JOIN PERGUNTA ON
+PERGUNTA.IDPERGUNTA = RESPOSTA.IDPERGUNTA
+INNER JOIN OPCAO ON
+PERGUNTA.IDPERGUNTA = OPCAO.IDPERGUNTA
+INNER JOIN QUIZ ON
+QUIZ.IDQUIZ = PERGUNTA.IDQUIZ
+WHERE
+QUIZ.TIPO = 'T';
+
+/*5)Para verificar qual pergunta teve mais
+participação foi utilizada uma consulta SQL
+que gerou o quadro abaixo, nesta tabela é
+listado o código da pergunta e a quantidade de
+participantes que respondeu essa questão.*/
+SELECT
+PERGUNTA.IDPERGUNTA,
+COUNT(IDPARTICIPANTE)
+FROM
+PARTICIPANTE
+INNER JOIN RESPOSTA ON
+PARTICIPANTE.IDPARTICIPANTE = RESPOSTA.IDPARTICIPANTE
+INNER JOIN PERGUNTA ON
+PERGUNTA.IDPERGUNTA = RESPOSTA.IDPERGUNTA
+GROUP BY
+PERGUNTA.IDPERGUNTA;
+
+/*6)Crie uma consulta SQL que liste o código
+identificador da matricula, o código
+identificador da disciplina, o nome da
+disciplina, o código identificador do aluno, o
+nome do aluno, o ano da matricula, o semestre
+da matricula e a situação da matricula. Liste
+apenas as matriculas com ano igual a 2015 e
+semestre igual a 1.*/
+SELECT
+MATRICULA.IDMATRICULA,
+DICIPLINA.IDDICIPLINA,
+DICIPLINA.NOME,
+ALUNO.IDALUNO,
+ALUNO.NOME,
+MATRICULA.ANO,
+MATRICULA.SITUACAO
+FROM
+ALUNO
+INNER JOIN MATRICULA ON
+ALUNO.IDALUNO = MATRICULA.IDALUNO
+INNER JOIN DICIPLINA ON
+DICIPLINA.IDDICIPLINA = MATRICULA.IDDICIPLINA
+WHERE
+MATRICULA.ANO = 2015 AND MATRICULA.SEMESTRE = 1;
+
+/*7)Crie uma consulta SQL que liste o código
+identificador do aluno, o nome do aluno, o
+código identificador da disciplina, o nome da
+disciplina e a situação da matricula. Liste
+apenas as matriculas com ano igual a 2015 e
+semestre igual a 2 e a disciplina
+“ANTROPOLOGIA TEOLÓGICA”, ordenado
+pelo nome do aluno.*/
+SELECT
+ALUNO.IDALUNO,
+ALUNO.NOME,
+DICIPLINA.IDDICIPLINA,
+DICIPLINA.NOME,
+MATRICULA.SITUACAO
+FROM
+ALUNO
+INNER JOIN MATRICULA ON
+ALUNO.IDALUNO = MATRICULA.IDALUNO
+INNER JOIN DICIPLINA ON
+DICIPLINA.IDDICIPLINA = MATRICULA.IDDICIPLINA
+WHERE
+MATRICULA.ANO = 2015 AND MATRICULA.SEMESTRE = 1 AND DICIPLINA.NOME = 'ANTROPOLOGIA TEOLÓGICA'
+ORDER BY
+ALUNO.NOME;
+/*8)Crie uma consulta para listar a quantidade de
+matricula, quantidade de disciplinas,
+quantidade de alunos, agrupado por ano,
+semestre e situação, conforme imagem abaixo:*/
+SELECT
+COUNT(MATRICULA.IDMATRICULA),
+COUNT(DICIPLINA.IDDICIPLINA),
+COUNT(ALUNO.IDALUNO),
+MATRICULA.ANO,
+MATRICULA.SEMESTRE,
+MATRICULA.SITUACAO
+FROM
+ALUNO
+INNER JOIN MATRICULA ON
+ALUNO.IDALUNO = MATRICULA.IDALUNO
+INNER JOIN DICIPLINA ON
+DICIPLINA.IDDICIPLINA = MATRICULA.IDDICIPLINA
+GROUP BY
+MATRICULA.ANO,
+MATRICULA.SEMESTRE,
+MATRICULA.SITUACAO;
+
+
