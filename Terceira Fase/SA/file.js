@@ -21,18 +21,3 @@ function recebeDigital() {
 
 setInterval(recebeDigital, tAtualizacao); // chama a função de leitura a cada tAtualizacao milissegundos
 
-
-//----------------------------------------------//
-function recebeAnalogica() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      entradaAnalogica = this.responseText;
-      document.getElementById("entradaAnalogica").innerHTML = entradaAnalogica;
-      console.log(`EA: ${entradaAnalogica}`);
-    }
-  };
-  xhttp.open("GET", url + "/entradaAnalogica", true);
-  xhttp.send();
-}
-setInterval(recebeAnalogica, tAtualizacao); // chama a função de leitura a cada tAtualizacao milissegundos

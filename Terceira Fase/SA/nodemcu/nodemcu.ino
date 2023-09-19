@@ -1,13 +1,13 @@
 /*
-  Alterado por: Fernando Costenaro Silva 
+  Alterado por: Fernando Costenaro Silva
   Baseado no exemplo de:
- 
+
   Rui Santos
   Complete project details at https://RandomNerdTutorials.com
-  
+
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files.
-  
+
   The above copyright notice and this permission notice shall be included in all
   copies or substantial portions of the Software.
 */
@@ -21,10 +21,9 @@
 #include <AsyncTCP.h>
 #include <ESPAsyncWebServer.h>
 
-
 // Substitua com as credenciais da sua rede
-const char* ssid     = "ARDUINO";
-const char* password = "12345678";
+const char *ssid = "ARDUINO";
+const char *password = "12345678";
 
 // Seu endereço de IP estático (será atribuido à placa)
 IPAddress local_IP(192, 168, 0, 214);
@@ -32,68 +31,63 @@ IPAddress local_IP(192, 168, 0, 214);
 IPAddress gateway(192, 168, 0, 1);
 
 IPAddress subnet(255, 255, 255, 0);
-IPAddress primaryDNS(8, 8, 8, 8);   //opcional
-IPAddress secondaryDNS(8, 8, 4, 4); //opcional
+IPAddress primaryDNS(8, 8, 8, 8);   // opcional
+IPAddress secondaryDNS(8, 8, 4, 4); // opcional
 
-
-const int Sensor1 = 12;//D0; //d0 4        //9; GPIO4 -> D2
-const int Sensor2 = 13;//D0; //d0 4        //9; GPIO4 -> D2
-const int Sensor3 = 14;//D0; //d0 4        //9; GPIO4 -> D2
-
+const int Sensor1 = 12; // D0; //d0 4        //9; GPIO4 -> D2
+const int Sensor2 = 13; // D0; //d0 4        //9; GPIO4 -> D2
+const int Sensor3 = 14; // D0; //d0 4        //9; GPIO4 -> D2
 
 String strValorDigital;
 
-const char* PARAM_INPUT_1 = "input1"; //armazena parametro recebido
-
+const char *PARAM_INPUT_1 = "input1"; // armazena parametro recebido
 
 int valorDigital = 0;
-char posicao = "0";
 int cont = 0
 
-
-// Cria um objeto AsyncWebServer na porta 80
+    // Cria um objeto AsyncWebServer na porta 80
 AsyncWebServer server(80);
 
-
-  
-String getValorDigitalSensor1() {
-  int valorDigital = digitalRead(Sensor1);
+String getValorDigitalSequencial()
+{
+  switch (cont)
+{
+case 1:
+  valorDigital = digitalRead(Sensor1);
   if(valorDigital == LOW){ // LOW ou HIGH depende da ligação do circuito
     strValorDigital = "A";
   }
   else{
     strValorDigital = "a";
   }
-  Serial.println("valor digital lido: " + String(valorDigital) + " " + strValorDigital);
-  return String(strValorDigital);
-}
-
-String getValorDigitalSensor2() {
-  int valorDigital = digitalRead(Sensor2);
+  cont= 2;
+  // Serial.println("valor digital lido: " + String(valorDigital) + " " + strValorDigital);
+break;
+case 2:
+valorDigital = digitalRead(Sensor2);
   if(valorDigital == LOW){ // LOW ou HIGH depende da ligação do circuito
     strValorDigital = "B";
   }
   else{
     strValorDigital = "b";
   }
-  Serial.println("valor digital lido: " + String(valorDigital) + " " + strValorDigital);
-  return String(strValorDigital);
-}
-
-String getValorDigitalSensor3() {
-  int valorDigital = digitalRead(Sensor3);
+   cont= 3;
+break;
+case 3:
+valorDigital = digitalRead(Sensor3);
   if(valorDigital == LOW){ // LOW ou HIGH depende da ligação do circuito
     strValorDigital = "C";
   }
   else{
     strValorDigital = "c";
   }
-  Serial.println("valor digital lido: " + String(valorDigital) + " " + strValorDigital);
-  return String(strValorDigital);
+   cont= 1;
+break;
+default:
+  strValorDigital = "deu merda meu";
+};
+return String(strValorDigital);
 }
-
-
-
 
 void setup(){
   // Porta Serial para debug
@@ -125,28 +119,10 @@ void setup(){
 
  
   // Rota para ler a entrada digital
-if(strValorDigita == "A" ||strValorDigita == "a" )
-{
+
   server.on("/entradaDigital", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send_P(200, "text/plain", getValorDigitalSensor2().c_str());
+    request->send_P(200, "text/plain", getValorDigitalSequencial().c_str());
   });
-
-}
-else if (strValorDigita == "B" ||strValorDigita == "b" )
-{
- server.on("/entradaDigital", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send_P(200, "text/plain", getValorDigitalSensor3().c_str());
-  });
-}
-else
-{
- server.on("/entradaDigital", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send_P(200, "text/plain", getValorDigitalSensor1().c_str());
-  });
-}
-
-
-
 
 
 
@@ -159,4 +135,3 @@ else
 void loop(){
   
 }
-

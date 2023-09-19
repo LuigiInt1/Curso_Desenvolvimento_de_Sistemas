@@ -4,35 +4,51 @@ const tAtualizacao = 500;
 // Armazena a url onde roda a aplicação
 url = "http://192.168.0.214"
 
-
-// Igual a anterior, só que o valor retornado é "on" ou "off" (simulando valor digital)
-function recebeDigital() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function () {
+function recebeSensor1() {
+  var sensor1 = new XMLHttpRequest();
+  sensor1.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      entradaDigital = this.responseText;
-      document.getElementById("entradaDigital").innerHTML = entradaDigital;
-      console.log(`ED: ${entradaDigital}`);
+      // entradaDigital = this.responseText;
+      // document.getElementById("entradaDigital").innerHTML = entradaDigital;
+      // console.log(`ED: ${entradaDigital}`);
     }
   };
-  xhttp.open("GET", url + "/entradaDigital", true);
-  xhttp.send();
+  sensor1.open("GET", url + "/lerSensor1", true);
+  sensor1.send();
 }
 
-setInterval(recebeDigital, tAtualizacao); // chama a função de leitura a cada tAtualizacao milissegundos
-
-
-//----------------------------------------------//
-function recebeAnalogica() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function () {
+function recebeSensor2() {
+  var sensor2 = new XMLHttpRequest();
+  sensor2.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      entradaAnalogica = this.responseText;
-      document.getElementById("entradaAnalogica").innerHTML = entradaAnalogica;
-      console.log(`EA: ${entradaAnalogica}`);
+      // entradaDigital = this.responseText;
+      // document.getElementById("entradaDigital").innerHTML = entradaDigital;
+      // console.log(`ED: ${entradaDigital}`);
     }
   };
-  xhttp.open("GET", url + "/entradaAnalogica", true);
-  xhttp.send();
+  sensor2.open("GET", url + "/lerSensor2", true);
+  sensor2.send();
 }
-setInterval(recebeAnalogica, tAtualizacao); // chama a função de leitura a cada tAtualizacao milissegundos
+
+function recebeSensor3() {
+  var sensor3 = new XMLHttpRequest();
+  sensor3.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      // entradaDigital = this.responseText;
+      // document.getElementById("entradaDigital").innerHTML = entradaDigital;
+      // console.log(`ED: ${entradaDigital}`);
+    }
+  };
+  sensor3.open("GET", url + "/lerSensor3", true);
+  sensor3.send();
+}
+
+
+
+
+function setintervalFunction() {
+  recebeSensor1()
+  recebeSensor2()
+  recebeSensor3()
+}
+setInterval( setintervalFunction, tAtualizacao );

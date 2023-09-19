@@ -41,7 +41,9 @@ const int Sensor2 = 13;//D0; //d0 4        //9; GPIO4 -> D2
 const int Sensor3 = 14;//D0; //d0 4        //9; GPIO4 -> D2
 
 
-String strValorDigital;
+String valorSensor1;
+String valorSensor2;
+String valorSensor3;
 
 const char* PARAM_INPUT_1 = "input1"; //armazena parametro recebido
 
@@ -57,39 +59,39 @@ AsyncWebServer server(80);
 
   
 String getValorDigitalSensor1() {
-  int valorDigital = digitalRead(Sensor1);
+  valorDigital = digitalRead(Sensor1);
   if(valorDigital == LOW){ // LOW ou HIGH depende da ligação do circuito
-    strValorDigital = "ON";
+    valorSensor1 = "ON";
   }
   else{
-    strValorDigital = "OFF";
+    valorSensor1 = "OFF";
   }
-  Serial.println("valor digital lido: " + String(valorDigital) + " " + strValorDigital);
-  return String(strValorDigital);
+  Serial.println("valor digital lido: " + String(valorDigital) + " " + valorSensor1);
+  return String(valorSensor1);
 }
 
 String getValorDigitalSensor2() {
-  int valorDigital = digitalRead(Sensor2);
+   valorDigital = digitalRead(Sensor2);
   if(valorDigital == LOW){ // LOW ou HIGH depende da ligação do circuito
-    strValorDigital = "ON";
+    valorSensor2 = "ON";
   }
   else{
-    strValorDigital = "OFF";
+    valorSensor2 = "OFF";
   }
-  Serial.println("valor digital lido: " + String(valorDigital) + " " + strValorDigital);
-  return String(strValorDigital);
+  Serial.println("valor digital lido: " + String(valorDigital) + " " + valorSensor2);
+  return String(valorSensor2);
 }
 
 String getValorDigitalSensor3() {
-  int valorDigital = digitalRead(Sensor3);
+  valorDigital = digitalRead(Sensor3);
   if(valorDigital == LOW){ // LOW ou HIGH depende da ligação do circuito
-    strValorDigital = "ON";
+    valorSensor3 = "ON";
   }
   else{
-    strValorDigital = "OFF";
+    valorSensor3 = "OFF";
   }
-  Serial.println("valor digital lido: " + String(valorDigital) + " " + strValorDigital);
-  return String(strValorDigital);
+  Serial.println("valor digital lido: " + String(valorDigital) + " " + valorSensor3);
+  return String(valorSensor3);
 }
 
 
