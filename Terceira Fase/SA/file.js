@@ -10,9 +10,9 @@ function recebeDigital() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
-      entradaDigital = this.responseText;
-      document.getElementById("entradaDigital").innerHTML = entradaDigital;
-      console.log(`ED: ${entradaDigital}`);
+      // entradaDigital = this.responseText;
+      // document.getElementById("entradaDigital").innerHTML = entradaDigital;
+      // console.log(`ED: ${entradaDigital}`);
     }
   };
   xhttp.open("GET", url + "/entradaDigital", true);
