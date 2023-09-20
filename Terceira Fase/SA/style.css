@@ -11,35 +11,73 @@ body{
     display: flex;
     width: 100vw; 
     height: 100vh; 
-    background-color: #787878;
-    color: #fff;
-    flex-direction: row;
+    justify-content:center;
+    align-items: center;
 }
 .armario{
-    display: flex;
+   align-items: center;
     flex-direction: column;
-    justify-content:space-evenly;
-    align-items: flex-end;
-    width: 35vw;
-    height: 100vh;
-    /* background-color: #fff; */
-    
+    display: flex;
+    width: 95vw;
+    height: 92vh;
+    background-color: rgb(59, 33, 33); 
+    padding-top: 2.5%;
 }
 .prateleira{
     display: flex;
-    margin-left: 40%;
-    justify-content: center;
+    width: 87vw;
+    height: 17.42vh;
+    flex-direction: row;  
+}
+.base{
+    display: flex;
+    width: 14.6vw;
+    height: 17.4vh;
+    background-color: rgb(121, 139, 139);
     align-items: center;
-    width: 30vw;
-    height: 30vh;
-    /* background-color: red;  */
-    
+    justify-content: center;
+    flex-direction: column;
+}
+.sensorPreto{
+    width: 11.6vw;
+    height: 15.4vh; 
+}
+#baseUm{
+    background-color: black;
+}
+#baseDois{
+    background-color: rgb(184, 104, 104);
+}
+#baseTres{
+    background-color: rgb(202, 177, 177);
+}
+#baseQuatro{
+    background-color: rgb(54, 47, 47);
+}
+#baseCinco{
+    background-color: rgb(58, 5, 5);
+}
+#baseSeis{
+    background-color: rgb(255, 255, 255);
+}
+
+#prateleiraUm{
+    background-color: blue;
+}
+#prateleiraDois{
+    background-color: rgb(0, 255, 98);
+}
+#prateleiraTres{
+    background-color: rgb(109, 109, 216);
+}
+#prateleiraQuatro{
+    background-color: rgb(189, 189, 207);
+}
+#prateleiraCinco{
+    background-color: rgb(255, 255, 255);
 }
 .prateleira img {
-     display: flex;
-    max-width:28vw; 
-    height: 28vh; 
-     /* background-color: blue  */
+    
 }
 
 @font-face {
@@ -54,10 +92,10 @@ h2{
     font-family: 'DS-Digital';
     font-size: clamp(0.1em , 1.5em + 3vw, 2em);
 }
-/* Media query para quando a tela for menor que 600px */
-@media (max-width: 1305px) {
+/* Media query para quando a tela for menor que 600px 
+@media (max-width: 1304px) {
     .prateleira {
-        flex-direction: column-reverse; /* Inverte a ordem dos elementos */
+        flex-direction: column-reverse; 
         width: 30vw;
         height: 40vh;
     }
@@ -66,4 +104,12 @@ h2{
         max-width:23vw; 
         height: 23vh; 
     }
+<<<<<<< HEAD
 }
+=======
+    h2{
+        font-size: clamp(0.1em , 1.5em + 3vw, 1.3em);
+    }
+}*/
+
+>>>>>>> 0fb8d145e6f623f44ad681c7a114b496d356734b
