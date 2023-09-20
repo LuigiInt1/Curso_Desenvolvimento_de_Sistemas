@@ -8,11 +8,13 @@ body{
     height: 100vh; 
 }
 .container{
+
+    background-color: #787878;
     display: flex;
     width: 100vw; 
     height: 100vh; 
     justify-content:center;
-    align-items: center;
+   
 }
 .armario{
    align-items: center;
@@ -20,61 +22,82 @@ body{
     display: flex;
     width: 95vw;
     height: 92vh;
-    background-color: rgb(59, 33, 33); 
-    padding-top: 2.5%;
+    background-color: #787878;
+    padding-top: 2%;
 }
 .prateleira{
     display: flex;
     width: 87vw;
     height: 17.42vh;
-    flex-direction: row;  
+    flex-direction: row; 
+    margin-bottom: 1%; 
 }
+.base img:hover{
+    padding: 5px;
+    
+    border-radius: 40px;
+    color: black;
+    
+}
+
+
 .base{
+    
     display: flex;
     width: 14.6vw;
     height: 17.4vh;
-    background-color: rgb(121, 139, 139);
+    background-color: #787878;
     align-items: center;
-    justify-content: center;
+    
     flex-direction: column;
 }
 .sensorPreto{
-    width: 11.6vw;
-    height: 15.4vh; 
+    width: 11.0vw;
+    height: 15.0vh; 
+    background-color: #787878;
+}
+p{
+    z-index: 1;
+    font-family: 'DS-Digital';
+    font-size: 1.8vw;
+    
+    margin: 0;
+    color: white;
+   
 }
 #baseUm{
-    background-color: black;
+    
 }
 #baseDois{
-    background-color: rgb(184, 104, 104);
+   
 }
 #baseTres{
-    background-color: rgb(202, 177, 177);
+    
 }
 #baseQuatro{
-    background-color: rgb(54, 47, 47);
+    
 }
 #baseCinco{
-    background-color: rgb(58, 5, 5);
+    
 }
 #baseSeis{
-    background-color: rgb(255, 255, 255);
+    
 }
 
 #prateleiraUm{
-    background-color: blue;
+   
 }
 #prateleiraDois{
-    background-color: rgb(0, 255, 98);
+    
 }
 #prateleiraTres{
-    background-color: rgb(109, 109, 216);
+    
 }
 #prateleiraQuatro{
-    background-color: rgb(189, 189, 207);
+   
 }
 #prateleiraCinco{
-    background-color: rgb(255, 255, 255);
+    
 }
 .prateleira img {
     
