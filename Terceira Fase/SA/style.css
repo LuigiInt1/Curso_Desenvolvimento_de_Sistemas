@@ -142,8 +142,12 @@ h2{
         max-width:23vw; 
         height: 23vh; 
     }
+<<<<<<< HEAD
+}
+=======
     h2{
         font-size: clamp(0.1em , 1.5em + 3vw, 1.3em);
     }
 }*/
 
+>>>>>>> 0fb8d145e6f623f44ad681c7a114b496d356734b
