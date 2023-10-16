@@ -52,3 +52,9 @@ function setintervalFunction() {
   recebeSensor3()
 }
 setInterval( setintervalFunction, tAtualizacao );
+
+
+ document.getElementById("sensorPreto")
+
+const gaveta = document.querySelector('#minha-lista');
+const img = lista.querySelectorAll('img');
