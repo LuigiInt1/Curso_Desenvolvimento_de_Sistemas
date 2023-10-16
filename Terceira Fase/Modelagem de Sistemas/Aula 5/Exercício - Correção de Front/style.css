@@ -1,0 +1,135 @@
+html{
+    height: 100vh;
+}
+body{
+    margin: 0;
+    border: 0;
+    width: 100vw; 
+    height: 100vh; 
+    
+}
+#container{
+   
+    background-color: #000000;
+    width: 100vw; 
+    height: 100vh; 
+    
+   
+}
+#top{
+    background-color: #000000;
+    display: flex;
+    width: 100vw; 
+    height: 8vh; 
+    flex-direction: row;
+    align-items: center;
+}
+#ImagemBarra{
+    margin-left: 1.5%;
+    width: 3vw; 
+    height: 4vh; 
+}
+#ImagemOrkut{
+    margin-left: 40.5%;
+}
+#input{
+    justify-content: center;
+    margin-left: 22%;
+    width: 16vw; 
+    height: 3.5vh; 
+    border: 0;
+    background-color: #474242;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    padding-left: 10px;
+    
+}
+#input::placeholder{
+    color: #ED2590;
+}
+#lupa{
+    position: absolute;
+    left: 89.8%;
+    width: 1.5vw; 
+    height: 3vh;
+    ;
+}
+#lateral{
+    
+    width: 10vw; 
+    height: 40vh;
+    margin-top: 5%;
+    margin-left: 2%;
+}
+.textoLateral{
+    margin-left: 18%;
+    font-size: 19px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    margin-bottom: 18%;
+
+}
+.textoLateral:hover{
+cursor: pointer;
+color: #ED2590;
+}
+#casa{
+position: absolute;
+width: 18px;
+height: 18px;
+left: 33px;
+}
+#perfil{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 33px;
+    margin-bottom: 6%;
+}
+#amigo{
+    position: absolute;
+width: 18px;
+height: 18px;
+left: 33px;
+}
+#comunidade{
+    position: absolute;
+width: 18px;
+height: 18px;
+left: 33px;
+}
+#foto{
+    position: absolute;
+width: 18px;
+height: 18px;
+top: 360px;
+left: 33px;
+}
+#video{
+    position: absolute;
+width: 18px;
+height: 18px;
+left: 33px;
+}
+
+#linha{
+width: 140px;
+height: 13px;
+}
+#meio{
+    width: 500px;
+    height: 500px;
+    top: 200px;
+    left: 438px;
+    position: absolute;
+    
+   
+}
+#direita{
+    
+    top: 200px;
+    left: 1160px;
+    position: absolute;
+    
+   
+}
