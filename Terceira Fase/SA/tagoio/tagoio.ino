@@ -28,7 +28,7 @@ int valor_azul;
 // int valor_led;  -- variavel que recebe a transformação da sting do msg
 
 //configurações da conexão MQTT
-EspMQTTClient client( "FIESC_IOT", "C6qnM4ag81", "mqtt.tago.io",   "Token",   "726d988b-a9c3-4502-b1a2-df961d16f17f",   "TestClient",      1883             );
+EspMQTTClient client( "FIESC_IOT", "C6qnM4ag81", "mqtt.tago.io",   "Token",   "4c38bba2-4836-4286-8d99-533548114876",   "Mateus", 1883 );
 
 //configuração dos pinos
 void setup()
@@ -127,7 +127,7 @@ void processa_msg(const String payload)
 // WARNING : YOU MUST IMPLEMENT IT IF YOU USE EspMQTTClient
 void onConnectionEstablished()
 {
-   client.subscribe("node/status", [] (const String &payload)  {
+   client.subscribe("Senai/Envio", [] (const String &payload)  {
    //  Serial.println(payload);
   //  processa_msg(payload);
   });
