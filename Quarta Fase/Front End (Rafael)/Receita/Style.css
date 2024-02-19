@@ -1,0 +1,82 @@
+
+html{
+    height: 100vh;
+    width: 100vw;
+    
+}
+body {
+    height: 100vh;
+    width: 100vw;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(70, 70, 70);
+}
+
+#top{
+    border-bottom-left-radius:25px ;
+    border-bottom-right-radius:25px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15%;
+    width: 100vw;
+    background-color: rgb(36, 36, 36);
+    /* border: 1px solid red; */
+    
+    box-shadow: inset 0 0 2px #ffb916; /* Cria uma borda interna */
+}
+
+h1 {
+    color: #aaaaaa;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #ffb916;
+    font-size: 4vw; /* Tamanho de fonte responsivo */
+    max-font-size: 40px; /* Tamanho máximo de fonte */
+    min-font-size: 10px; /* Tamanho mínimo de fonte */
+    text-align: center; /* Alinhar o texto ao centro */
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 7vw; /* Ajustar para tamanhos de tela menores */
+    }
+}
+
+#input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    width: 100vw;
+}
+
+#BotaoCriarReceita{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 34.8%;
+    width: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10PX;
+    background-color: #ffb916;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+}
+ #BotaoCriarReceita:hover{
+    background-color:  rgb(36, 36, 36);
+    cursor: pointer;
+ }
+
+#InputPesquisa{
+    font-size: small;
+    margin-left: 10PX;
+    padding-left: 10PX;
+    background-color: #ffb916;
+    border-radius: 10px;
+}
+

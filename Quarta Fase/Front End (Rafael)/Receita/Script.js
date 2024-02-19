@@ -1,0 +1,3 @@
+function CriarReceita(){
+    alert('Deu')
+}
