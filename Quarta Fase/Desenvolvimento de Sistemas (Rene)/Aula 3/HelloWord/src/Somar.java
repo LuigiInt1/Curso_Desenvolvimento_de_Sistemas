@@ -13,5 +13,9 @@ public class Somar {
         Integer soma = a + b;
 
         System.out.println("a + b " + "= " + soma  );
+
+        scan.close();
+
+
     }
 }
