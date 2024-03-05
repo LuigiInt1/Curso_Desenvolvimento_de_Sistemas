@@ -1,5 +1,5 @@
 
-public class Carro {
+public class Carro2 {
     private String cor;
     private String marca;
     private String modelo;
@@ -37,5 +37,16 @@ public class Carro {
         return velocidadeMaxima;
     }
     
+    public boolean equals(Carro2 carro){
+        if (
+        carro.getMarca() == this.marca &&
+        carro.getCor() == this.cor &&
+        carro.getModelo() == this.modelo &&
+        carro.getVelocidadeMaxima() == this.velocidadeMaxima) {
+            return true;
+        }else{
+            return false;
+        }
+    }
 
 }

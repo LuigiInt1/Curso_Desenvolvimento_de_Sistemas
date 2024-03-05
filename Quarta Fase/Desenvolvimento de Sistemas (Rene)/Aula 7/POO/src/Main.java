@@ -1,15 +1,22 @@
 public class Main {
     public static void main(String[] args){
 
-        Carro corsa = new Carro();
+        Carro2 corsa = new Carro2();
         corsa.setCor("Amarelo");
-        corsa.setMarca("Corsa");
-        System.out.printf("Cor: %s --- Marca: %s\n", corsa.getCor(), corsa.getMarca());
+        corsa.setModelo("Corsa");
+        corsa.setVelocidademaxima(100);
+        System.out.printf("Cor: %s --- Modelo: %s --- Velocidade Máxima: %s\n", corsa.getCor(), corsa.getModelo(), corsa.getVelocidadeMaxima());
 
-        Carro celta = new Carro();
-        celta.setCor("Azul");
-        celta.setMarca("Celta");
-        System.out.printf("Cor: %s --- Marca: %s\n", celta.getCor(), celta.getMarca());
+        Carro2 celta = new Carro2();
+        celta.setCor("Amarelo");
+        celta.setModelo("Corsa");
+        celta.setVelocidademaxima(100);
+        System.out.printf("Cor: %s --- Modelo: %s --- Velocidade Máxima: %s\n", celta.getCor(), celta.getModelo(), celta.getVelocidadeMaxima());
         
+        if (corsa.equals(celta)) {
+            System.out.println("São iguais");
+        }else{
+            System.out.println("Não são iguais");
+        }
     }
 }
