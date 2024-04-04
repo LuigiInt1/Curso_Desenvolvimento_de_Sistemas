@@ -1,4 +1,6 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -6,7 +8,9 @@ public class Main {
 
         ParkAddress rua4 = new ParkAddress("Cachoeirinha", "RS", "Brasil", "Imbui", 123135.1234f, 123.432f);
 
-        CombatTeam timeAzul = new CombatTeam(3, rua4, luigi);
+        List<User> lista = new ArrayList<User>();
+
+        CombatTeam timeAzul = new CombatTeam(3, rua4, lista );
 
         Leader tulho = new Leader("Luigi", "Santos", "Luigisantostk@gmai.com", "arereOgremiovaiJogarASerieB", false, "balaNacara", timeAzul);
 

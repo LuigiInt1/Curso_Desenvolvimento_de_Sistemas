@@ -1,0 +1,45 @@
+Funcionalidade: Visando uma diferenciação de "Tipos de Usuário" no momento em que entrarem no site será
+preciso 3 tipos de verificação para limitar o acesso do mesmo.
+
+*CENÁRIO 1*
+
+Cenário: O usuário entrar no site a primeira vez.
+
+Quando: O usuário entrar no site pela primeira vez.
+
+Então: Ele será direcionado para Home Page do site onde poderá somente vizualizar os produtos,
+qualquer outra ação do mesmo levará o usuário a cadastrar um novo perfil.
+
+*--------------------------------------------------------------------------------------------------*
+
+*CENÁRIO 2*
+Cenário: O usuário entrar no site já tendo uma conta cadastrada.
+
+Quando: O usuário entrar no já tendo uma conta cadastrada.
+
+Então: Ele será direcionado para Home Page do site onde poderá visualizar, add produtos no carrinho e efetuar a compra do produto.
+
+*--------------------------------------------------------------------------------------------------*
+
+*CENÁRIO 3*
+Cenário: O usuário entrar no site vinculado a uma conta de ADM.
+
+Quando: O usuário entrar no site vinculado a uma conta de ADM.
+
+Então: Ele será direcionado para Home Page do site onde poderá visualizar os produtos e banners de propagandas do site e terá a possibilidade entrar em um sistema próprio para ADM que lá terá todas
+as ferramentas necessárias para a administração do site EX:ADD produto, Excluir produto, Alterar Preço, ETC.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

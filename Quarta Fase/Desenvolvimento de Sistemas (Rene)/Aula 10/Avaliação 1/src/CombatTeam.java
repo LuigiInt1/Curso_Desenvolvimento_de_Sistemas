@@ -1,8 +1,10 @@
+import java.util.List;
+
 public class CombatTeam {
 
     private Integer numberMembers;
     private ParkAddress parkAddress;
-    private User user;
+    private List <User> users;
 
     
 
@@ -11,11 +13,13 @@ public class CombatTeam {
     }
 
 
-    public CombatTeam(Integer numberMembers, ParkAddress parkAddress, User user) {
+
+    public CombatTeam(Integer numberMembers, ParkAddress parkAddress, List<User> users) {
         this.numberMembers = numberMembers;
         this.parkAddress = parkAddress;
-        this.user = user;
+        this.users = users;
     }
+
 
 
     public Integer getNumberMembers() {
@@ -23,9 +27,11 @@ public class CombatTeam {
     }
 
 
+
     public void setNumberMembers(Integer numberMembers) {
         this.numberMembers = numberMembers;
     }
+
 
 
     public ParkAddress getParkAddress() {
@@ -33,19 +39,23 @@ public class CombatTeam {
     }
 
 
+
     public void setParkAddress(ParkAddress parkAddress) {
         this.parkAddress = parkAddress;
     }
 
 
-    public User getUser() {
-        return user;
+
+    public List<User> getUsers() {
+        return users;
     }
 
 
-    public void setUser(User user) {
-        this.user = user;
+
+    public void setUsers(List<User> users) {
+        this.users = users;
     }
+
 
 
     @Override
@@ -54,9 +64,10 @@ public class CombatTeam {
         int result = 1;
         result = prime * result + ((numberMembers == null) ? 0 : numberMembers.hashCode());
         result = prime * result + ((parkAddress == null) ? 0 : parkAddress.hashCode());
-        result = prime * result + ((user == null) ? 0 : user.hashCode());
+        result = prime * result + ((users == null) ? 0 : users.hashCode());
         return result;
     }
+
 
 
     @Override
@@ -78,19 +89,23 @@ public class CombatTeam {
                 return false;
         } else if (!parkAddress.equals(other.parkAddress))
             return false;
-        if (user == null) {
-            if (other.user != null)
+        if (users == null) {
+            if (other.users != null)
                 return false;
-        } else if (!user.equals(other.user))
+        } else if (!users.equals(other.users))
             return false;
         return true;
     }
 
 
+
     @Override
     public String toString() {
-        return "CombatTeam [numberMembers=" + numberMembers + ", parkAddress=" + parkAddress + ", user=" + user + "]";
+        return "CombatTeam [numberMembers=" + numberMembers + ", parkAddress=" + parkAddress + ", users=" + users + "]";
     }
+
+    
+    
 
 
 
