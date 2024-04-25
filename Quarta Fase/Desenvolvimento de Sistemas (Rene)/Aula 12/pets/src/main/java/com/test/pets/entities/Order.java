@@ -21,6 +21,6 @@ public class Order {
     private Integer quantity;
     private LocalDateTime shipDate;
     private OrderStatus status;
-    private Boolean completa;
+    private Boolean complete;
 
 }

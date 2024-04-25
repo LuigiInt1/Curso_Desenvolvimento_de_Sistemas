@@ -1,0 +1,100 @@
+Funcionalidade: O usuário precisa conseguir seguir todo o fluxo
+ de compra que o sistema proporciona .
+
+*CENÁRIO 1*
+
+Cenário: O usuário deseja adicionar um produto ao carrinho de compras.
+
+Quando: O usuário clica no botão "Adicionar ao carrinho"
+
+Então: Uma unidade daquele produto é adicionada ao carrinho de compras do cliente.
+
+*--------------------------------------------------------------------------------------------------*
+
+*CENÁRIO 2*
+
+Cenário: O usuário deseja aumentar a quantidade da unidade do produto para adicionar ao carrinho
+
+Quando: O usuário clica no botão "+" ou "-" para auterar a quantidade daquele produto.
+
+Então: Aumenta ou diminui a quantidade da compra daquele produto.
+
+*--------------------------------------------------------------------------------------------------*
+
+*CENÁRIO 3*
+
+Cenário: A quantidade do produto que o usuário selecionou foi para o carrinho de compra do usuário
+
+Quando: O usuário clica no botão "Adicionar ao carrinho".
+
+Então: A quantidade selecionada pelo usuári odeve estar no carrinho.
+
+*--------------------------------------------------------------------------------------------------*
+
+*CENÁRIO 4*
+
+Cenário: O usuário adiciona ao carrinho mais de um produto
+
+Quando: O usuário clica no botão "Adicionar ao carrinho" mais de um produto.
+
+Então: No carrinho deve estar todos os produtos selecionados pelo usuário.
+
+*--------------------------------------------------------------------------------------------------*
+
+*CENÁRIO 5*
+
+Cenário: O usuário decide retirar sua compra no mercado.
+
+Quando: O usuário clica no botão "Retirar Compra no Local".
+
+Então: O usuário vai para parte de pagamento.
+
+*--------------------------------------------------------------------------------------------------*
+
+*CENÁRIO 6*
+
+Cenário: O usuário solicita a entrega da compra.
+
+Quando: O usuário clica no botão "Entrega".
+
+E: O usuário seleciona o local da entrega.
+
+Então: O usuário vai para parte de pagamento.
+
+*--------------------------------------------------------------------------------------------------*
+
+*CENÁRIO 7*
+
+Cenário: O valor da compra deve estar correta (A soma dos valores de todos os produtos selecionados).
+
+Quando: O usuário vai fazer o pagamento.
+
+Então: O valor da compra aparece para o usuário.
+
+*--------------------------------------------------------------------------------------------------*
+
+*CENÁRIO 8*
+
+Cenário: O usuário escolhe a forma de pagamento (PIX).
+
+Quando: o usuário seleciona o botão (PIX).
+
+Então: Gera um QRcode e um código para o pagamento do usuário.
+
+*--------------------------------------------------------------------------------------------------*
+
+*CENÁRIO 9*
+
+Cenário: O usuário decide cancelar a compra.
+
+Quando: o usuário seleciona o botão (Cancelar Compra).
+
+Então: Uma menssagem é enviada para o mercado cancelando o pedido.
+
+*--------------------------------------------------------------------------------------------------*
+
+
+
+
+
+

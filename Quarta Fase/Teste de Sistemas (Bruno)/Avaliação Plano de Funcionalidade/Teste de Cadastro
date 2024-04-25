@@ -1,0 +1,82 @@
+Funcionalidade: Todo os sistema de gerenciamento de Cadastro de usuário e ADM
+
+
+*CENÁRIO 1*
+
+Cenário: O usuário deseja criar seu perfil então vai para tela de cadastro.
+
+Quando: O usuário clica no botão "Cadastrar".
+
+Então: Ele é direcionado para página de Cadastro.
+
+*--------------------------------------------------------------------------------------------------*
+
+*CENÁRIO 2*
+
+Cenário: O usuário digita um número no local de "nome".
+
+Quando: O usuário digita um número no local de "nome".
+
+Então: O sistema aponta um erro "Não pode botar um número no Nome".
+
+*--------------------------------------------------------------------------------------------------*
+
+*CENÁRIO 3*
+
+Cenário: O usuário digita um Caracter Especial no local de "nome".
+
+Quando: O usuário digita um Caracter Especial no local de "nome".
+
+Então: O sistema aponta um erro "Não pode botar um Caracter Especial no Nome".
+
+*--------------------------------------------------------------------------------------------------*
+
+*CENÁRIO 4*
+
+Cenário: O usuário digita um nome com mais de 30 caracteres no local de "nome".
+
+Quando: O usuário digita um nome com mais de 30 caracteres no local de "nome".
+
+Então: O sistema aponta um erro "Não pode botar um nome com mais de 30 caracteres".
+
+*--------------------------------------------------------------------------------------------------*
+
+*CENÁRIO 5*
+
+Cenário: o usuário não digita o nome.
+
+Quando: Clica no botão de Cadastrar.
+
+Então: O sistema aponta um erro "Preencha todas as Informações obrigatórias".
+
+*--------------------------------------------------------------------------------------------------*
+
+*CENÁRIO 6*
+
+Cenário: O usuário digita um email fora do padrão.
+
+Quando: O usuário digita um email fora do padrão.
+
+Então: O sistema aponta um erro "E-MAIL INVALIDO".
+
+*--------------------------------------------------------------------------------------------------*
+
+*CENÁRIO 7*
+
+Cenário: Verificação de um envio de e-mail para o usuário confirmar.
+
+Quando: O usuário digita um email e as informações restantes.
+
+E: clica em cadastrar
+
+Então: O sistema envia um e-mail de confirmação para o usuário.
+
+*--------------------------------------------------------------------------------------------------*
+
+*CENÁRIO 8*
+
+Cenário: O usuário digita uma senha com menos de 5 Caracteres
+
+Quando: O usuário digita uma senha com menos de 5 Caracteres
+
+Então: O sistema aponta um erro "Senha com mínimo de 8 caracteres".
